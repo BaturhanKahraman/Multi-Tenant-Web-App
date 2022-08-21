@@ -22,7 +22,7 @@ namespace MultiTenantWebApp.Controllers
         public ActionResult TestMainDb()
         {
             using var mainCtx = new MainContext();
-            return Ok(_appDbCtx.Database.CanConnect());
+            return Ok(mainCtx.Database.CanConnect());
         }
     }
 }
